@@ -76,3 +76,8 @@ yarn-error.log*
 # Docker temporary files (ignore if testing Docker locally, no need to commit)
 .dockerignore
 Dockerfile.local
+
+# ======================== Claude Code ========================
+# Claude Code related files
+.claude/
+*.claude

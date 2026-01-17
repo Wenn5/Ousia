@@ -1,0 +1,22 @@
+# LF default
+* text=auto eol=lf
+
+# Do not translate assets files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+
+# force LF
+*.sh eol=lf
+*.js eol=lf
+*.ts eol=lf
+*.tsx eol=lf
+*.css eol=lf
+*.html eol=lf
+
+# Windows bat force CRLF（if any）
+*.bat eol=crlf
+*.cmd eol=crlf

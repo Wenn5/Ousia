@@ -81,3 +81,7 @@ Dockerfile.local
 # Claude Code related files
 .claude/
 *.claude
+
+# ======================== Development Documentation ========================
+# Private architecture and development documentation (vibecoding)
+vibecoding/

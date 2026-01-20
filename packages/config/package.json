@@ -1,0 +1,15 @@
+{
+  "name": "@ousia/config",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "exports": {
+    "./tsconfig/*": "./tsconfig/*",
+    "./viteconfig/*": "./viteconfig/*",
+    "./tailwind": "./tailwind.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0"
+}

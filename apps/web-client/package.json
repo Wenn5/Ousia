@@ -1,0 +1,42 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ousia/config": "workspace:*",
+    "@ousia/core": "workspace:*",
+    "@ousia/ui": "workspace:*",
+    "@radix-ui/themes": "catalog:radix-ui",
+    "@tiptap/core": "catalog:tiptap",
+    "@tiptap/pm": "catalog:tiptap",
+    "@tiptap/react": "catalog:tiptap",
+    "@tiptap/starter-kit": "catalog:tiptap",
+    "react": "catalog:react",
+    "react-dom": "catalog:react"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:eslint",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/node": "catalog:typescript",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "@vitejs/plugin-react": "catalog:vite",
+    "autoprefixer": "catalog:tailwind",
+    "eslint": "catalog:eslint",
+    "eslint-plugin-react-hooks": "catalog:eslint",
+    "eslint-plugin-react-refresh": "catalog:eslint",
+    "globals": "catalog:eslint",
+    "postcss": "catalog:tailwind",
+    "tailwindcss": "catalog:tailwind",
+    "typescript": "catalog:typescript",
+    "typescript-eslint": "catalog:typescript",
+    "vite": "catalog:vite"
+  }
+}

@@ -1,9 +1,10 @@
 {
   "files": [],
   "references": [
-    { "path": "packages/ui" },
+    { "path": "packages/editor" },
     { "path": "packages/core" },
-    { "path": "apps/web-client" }
+    { "path": "packages/modules" },
+    { "path": "apps/frontend" }
     //{ "path": "apps/desktop" }
   ]
 }

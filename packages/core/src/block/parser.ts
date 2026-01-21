@@ -48,7 +48,7 @@ export class BlockParser {
     let position = 0;
 
     // 递归遍历 TipTap JSON
-    function traverseNode(node: TipTapNode) {
+    const traverseNode = (node: TipTapNode) => {
       // 只处理顶级 block 节点
       if (this.isBlockNode(node)) {
         const block = this.tiptapNodeToBlock(node, nodeId, position);
@@ -60,12 +60,12 @@ export class BlockParser {
 
       // 递归处理子节点
       if (node.content) {
-        node.content.forEach((child) => traverseNode.call(this, child));
+        node.content.forEach(traverseNode);
       }
-    }
+    };
 
     if (tiptapJson.type === 'doc' && tiptapJson.content) {
-      tiptapJson.content.forEach((node) => traverseNode.call(this, node));
+      tiptapJson.content.forEach(traverseNode);
     }
 
     return blocks;

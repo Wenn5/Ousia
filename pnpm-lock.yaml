@@ -21,6 +21,10 @@ catalogs:
     globals:
       specifier: ^16.5.0
       version: 16.5.0
+  lucide:
+    lucide-react:
+      specifier: ^0.562.0
+      version: 0.562.0
   radix-ui:
     '@radix-ui/themes':
       specifier: ^3.2.1
@@ -83,15 +87,12 @@ importers:
 
   .:
     devDependencies:
-      '@ousia/config':
-        specifier: workspace:*
-        version: link:packages/config
       '@ousia/core':
         specifier: workspace:*
         version: link:packages/core
-      '@ousia/ui':
+      '@ousia/modules':
         specifier: workspace:*
-        version: link:packages/ui
+        version: link:packages/modules
       '@tiptap/core':
         specifier: 3.15.3
         version: 3.15.3(@tiptap/pm@3.15.3)
@@ -111,17 +112,17 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
 
-  apps/web-client:
+  apps/frontend:
     dependencies:
-      '@ousia/config':
-        specifier: workspace:*
-        version: link:../../packages/config
       '@ousia/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@ousia/ui':
+      '@ousia/editor':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../packages/editor
+      '@ousia/modules':
+        specifier: workspace:*
+        version: link:../../packages/modules
       '@radix-ui/themes':
         specifier: catalog:radix-ui
         version: 3.2.1(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -193,32 +194,32 @@ importers:
         specifier: catalog:vite
         version: 7.3.1(@types/node@24.10.9)(jiti@2.6.1)(lightningcss@1.30.2)
 
-  packages/config: {}
-
   packages/core:
     devDependencies:
       typescript:
         specifier: catalog:typescript
         version: 5.9.3
 
-  packages/tiptap-ousia-extensions:
+  packages/editor:
     dependencies:
-      '@tiptap/core':
-        specifier: ^3.15.3
-        version: 3.15.3(@tiptap/pm@3.15.3)
-    devDependencies:
-      '@types/uuid':
-        specifier: ^9.0.8
-        version: 9.0.8
-
-  packages/ui:
-    dependencies:
-      '@ousia/config':
+      '@ousia/modules':
         specifier: workspace:*
-        version: link:../config
+        version: link:../modules
       '@radix-ui/themes':
         specifier: catalog:radix-ui
         version: 3.2.1(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@tiptap/core':
+        specifier: catalog:tiptap
+        version: 3.15.3(@tiptap/pm@3.15.3)
+      '@tiptap/pm':
+        specifier: catalog:tiptap
+        version: 3.15.3
+      '@tiptap/react':
+        specifier: catalog:tiptap
+        version: 3.15.3(@floating-ui/dom@1.7.4)(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@tiptap/starter-kit':
+        specifier: catalog:tiptap
+        version: 3.15.3
       react:
         specifier: catalog:react
         version: 19.2.0
@@ -232,6 +233,37 @@ importers:
       '@types/react-dom':
         specifier: catalog:react
         version: 19.2.3(@types/react@19.2.8)
+      tailwindcss:
+        specifier: catalog:tailwind
+        version: 4.1.18
+      typescript:
+        specifier: catalog:typescript
+        version: 5.9.3
+
+  packages/modules:
+    dependencies:
+      '@radix-ui/themes':
+        specifier: catalog:radix-ui
+        version: 3.2.1(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      lucide-react:
+        specifier: catalog:lucide
+        version: 0.562.0(react@19.2.0)
+      react:
+        specifier: catalog:react
+        version: 19.2.0
+      react-dom:
+        specifier: catalog:react
+        version: 19.2.0(react@19.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: catalog:react
+        version: 19.2.8
+      '@types/react-dom':
+        specifier: catalog:react
+        version: 19.2.3(@types/react@19.2.8)
+      tailwindcss:
+        specifier: catalog:tailwind
+        version: 4.1.18
       typescript:
         specifier: catalog:typescript
         version: 5.9.3
@@ -1679,9 +1711,6 @@ packages:
   '@types/use-sync-external-store@0.0.6':
     resolution: {integrity: sha512-zFDAD+tlpf2r4asuHEj0XH6pY6i0g5NeAHPn+15wk3BV6JA69eERFXC1gyGThDkVa1zCyKr5jox1+2LbV/AMLg==}
 
-  '@types/uuid@9.0.8':
-    resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
-
   '@typescript-eslint/eslint-plugin@8.53.0':
     resolution: {integrity: sha512-eEXsVvLPu8Z4PkFibtuFJLJOTAV/nPdgtSjkGoPpddpFk3/ym2oy97jynY6ic2m6+nc5M8SE1e9v/mHKsulcJg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2156,6 +2185,11 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lucide-react@0.562.0:
+    resolution: {integrity: sha512-82hOAu7y0dbVuFfmO4bYF1XEwYk/mEbM5E+b1jgci/udUBEE/R7LF5Ip0CCEmXe8AybRM8L+04eP+LGZeDvkiw==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -3961,8 +3995,6 @@ snapshots:
 
   '@types/use-sync-external-store@0.0.6': {}
 
-  '@types/uuid@9.0.8': {}
-
   '@typescript-eslint/eslint-plugin@8.53.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
@@ -4450,6 +4482,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@0.562.0(react@19.2.0):
+    dependencies:
+      react: 19.2.0
 
   magic-string@0.30.21:
     dependencies:

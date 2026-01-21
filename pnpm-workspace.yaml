@@ -16,6 +16,7 @@ catalogs:
     '@tiptap/pm': ^3.15.3
     '@tiptap/react': ^3.15.3
     '@tiptap/starter-kit': ^3.15.3
+    '@tiptap/simple-editor': ^0.1.5
 
   # Radix UI packages
   radix-ui:
@@ -45,3 +46,6 @@ catalogs:
     tailwindcss: ^4.0.0
     autoprefixer: ^10.4.20
     postcss: ^8.4.49
+  # lucide packages
+  lucide:
+    lucide-react: ^0.562.0

@@ -9,9 +9,9 @@ import {
   TabBar,
   TabItem,
   ShortcutButton
-} from '@ousia/ui';
-import { TipTapEditor } from './components/TipTapEditor';
-import { TestTailwind } from './test-tailwind';
+} from '@ousia/web/layout';
+import { TipTapEditor } from '@ousia/editor';
+//import { TestTailwind } from './test-tailwind';
 
 function App() {
   // Tab state for editor area
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       {/* Test Tailwind */}
-      <TestTailwind />
+      {/*<TestTailwind />*/}
 
       <AppLayout>
       {/* Left shortcut bar with action buttons */}

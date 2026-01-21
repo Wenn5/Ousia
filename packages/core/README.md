@@ -1,0 +1,1 @@
+# Platform irralevent logics, definations

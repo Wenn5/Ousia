@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source "../../../packages/modules/web/layout/";
+@source "../../../packages/common/src/**";
 
 /* Global styles for full-screen note app */
 * {

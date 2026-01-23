@@ -12,9 +12,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@ousia/core': path.resolve(__dirname, '../../packages/core/src'),
-      '@ousia/web': path.resolve(__dirname, '../../packages/modules/web'),
-      '@ousia/editor': path.resolve(__dirname, '../../packages/editor/src'),
-      //'@ousia/modules': path.resolve(__dirname, '../../packages/modules/src'),
+      '@ousia/common': path.resolve(__dirname, '../../packages/common/src'),
+      '@ousia/tiptap': path.resolve(__dirname, '../../packages/tiptap/src'),
     },
   },
 })

@@ -1,0 +1,27 @@
+{
+  "name": "@ousia/common",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "dependencies": {
+    "@dnd-kit/core": "catalog:dnd-kit",
+    "@dnd-kit/modifiers": "catalog:dnd-kit",
+    "@radix-ui/themes": "catalog:radix-ui",
+    "lucide-react": "catalog:lucide",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "react-resizable-panels": "catalog:react-resizable-panels"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "tailwindcss": "catalog:tailwind",
+    "typescript": "catalog:typescript"
+  }
+}

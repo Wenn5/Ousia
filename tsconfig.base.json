@@ -11,9 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "@ousia/core/*": ["packages/core/*"],
-      "@ousia/web/*": ["packages/modules/web/*"],
-      "@ousia/editor/*": ["packages/editor/*"]
-      //"@ousia/modules/*": ["packages/modules/*"],
+      "@ousia/common/*": ["packages/common/src/*"],
+      "@ousia/tiptap/*": ["packages/tiptap/src/*"],
     }
   }
 }

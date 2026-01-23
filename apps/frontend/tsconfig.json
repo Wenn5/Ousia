@@ -14,10 +14,10 @@
       "path": "../../packages/core"
     },
     {
-      "path": "../../packages/modules"
+      "path": "../../packages/common"
     },
     {
-      "path": "../../packages/editor"
+      "path": "../../packages/tiptap"
     }
   ]
 }

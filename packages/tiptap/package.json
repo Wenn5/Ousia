@@ -1,0 +1,47 @@
+{
+  "name": "@ousia/tiptap",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "dependencies": {
+    "@floating-ui/react": "^0.27.16",
+    "@ousia/common": "workspace:*",
+    "@radix-ui/colors": "catalog:radix-ui",
+    "@radix-ui/react-toolbar": "catalog:radix-ui",
+    "@radix-ui/react-popover": "catalog:radix-ui",
+    "@radix-ui/react-dropdown-menu": "catalog:radix-ui",
+    "@radix-ui/themes": "catalog:radix-ui",
+    "react-hotkeys-hook": "catalog:react-hotkeys-hook",
+    "@tiptap/extension-highlight": "catalog:tiptap",
+    "@tiptap/extension-horizontal-rule": "catalog:tiptap",
+    "@tiptap/extension-image": "catalog:tiptap",
+    "@tiptap/extension-list": "catalog:tiptap",
+    "@tiptap/extension-subscript": "catalog:tiptap",
+    "@tiptap/extension-superscript": "catalog:tiptap",
+    "@tiptap/extension-text-align": "catalog:tiptap",
+    "@tiptap/extension-typography": "catalog:tiptap",
+    "@tiptap/extensions": "catalog:tiptap",
+    "@tiptap/pm": "catalog:tiptap",
+    "@tiptap/react": "catalog:tiptap",
+    "@tiptap/starter-kit": "catalog:tiptap",
+    "lodash.throttle": "^4.1.1",
+    "lucide-react": "catalog:lucide",
+    "react": "catalog:react",
+    "react-dom": "catalog:react"
+  },
+  "devDependencies": {
+    "@types/lodash.throttle": "^4.1.9",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "sass": "^1.97.3",
+    "sass-embedded": "^1.97.3",
+    "tailwindcss": "catalog:tailwind",
+    "typescript": "catalog:typescript"
+  }
+}

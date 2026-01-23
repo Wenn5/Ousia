@@ -11,13 +11,9 @@
   },
   "dependencies": {
     "@ousia/core": "workspace:*",
-    "@ousia/modules": "workspace:*",
-    "@ousia/editor": "workspace:*",
+    "@ousia/common": "workspace:*",
+    "@ousia/tiptap": "workspace:*",
     "@radix-ui/themes": "catalog:radix-ui",
-    "@tiptap/core": "catalog:tiptap",
-    "@tiptap/pm": "catalog:tiptap",
-    "@tiptap/react": "catalog:tiptap",
-    "@tiptap/starter-kit": "catalog:tiptap",
     "react": "catalog:react",
     "react-dom": "catalog:react"
   },

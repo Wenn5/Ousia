@@ -2,28 +2,31 @@ import { useState } from 'react';
 import {
   AppLayout,
   ShortcutBar,
-  DocumentTree,
+  WidgetArea,
+  WidgetAreaMode,
   MainArea,
   EditorArea,
   RightPanel,
   TabBar,
   TabItem,
   ShortcutButton
-} from '@ousia/web/layout';
-import { TipTapEditor } from '@ousia/editor';
-//import { TestTailwind } from './test-tailwind';
+} from '@ousia/common/components/layout';
+import { TiptapEditor } from '@ousia/tiptap/tiptap-editor';
+import {Icon} from "@ousia/common/components/icon";
+import { TestTailwind } from './test-tailwind';
 
 function App() {
   // Tab state for editor area
   const [editorTab, setEditorTab] = useState<'editor' | 'preview'>('editor');
   // Tab state for right panel
   const [rightPanelTab, setRightPanelTab] = useState<'properties' | 'outline'>('properties');
+  // Widget area mode (fixed or floating)
+  const [widgetMode, setWidgetMode] = useState<WidgetAreaMode | undefined>(undefined); // undefined = use saved/default
 
   return (
     <>
       {/* Test Tailwind */}
       {/*<TestTailwind />*/}
-
       <AppLayout>
       {/* Left shortcut bar with action buttons */}
       <ShortcutBar
@@ -47,8 +50,15 @@ function App() {
         </ShortcutButton>
       </ShortcutBar>
 
-      {/* Document tree panel */}
-      <DocumentTree />
+      {/* Widget area panel with resizable and floating support */}
+      <WidgetArea
+        mode={widgetMode}
+        defaultWidth={250}
+        minWidth={180}
+        maxWidth={500}
+        resizable={true}
+        onModeChange={setWidgetMode}
+      />
 
       {/* Main content area with editor and right panel */}
       <MainArea
@@ -72,7 +82,7 @@ function App() {
         {/* Editor panel */}
         {editorTab === 'editor' && (
           <EditorArea>
-            <TipTapEditor />
+            <TiptapEditor />
           </EditorArea>
         )}
 
